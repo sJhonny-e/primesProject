@@ -29,13 +29,17 @@ describe('PrimesTable', function(){
 		var primesTable;
 		var fakePrimes = [5,7,9,11];
 		before(function(){
-			sinon.stub(primesCalculatorDep, 'getPrimes').returns(fakePrimes);
+			sinon.stub(primesCalculatorDep, 'getPrimes').returns(fakePrimes.slice(0));	// use a copy for each new test
 			primesTable = new PrimesTable(88);
 		});
 
 		it('returns 1 for (0,0)', function(){
 			expect(primesTable.elementAt(0, 0)).to.equal(1);
-		})
+		});
+
+		it ('returns the (i-1)-th prime for (i, 0)', function(){
+			expect(primesTable.elementAt(2, 0)).to.equal(fakePrimes[2-1]);
+		});
 
 
 		after(function(){
