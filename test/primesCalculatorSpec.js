@@ -9,7 +9,7 @@ describe('primesCalculator', function(){
 			expect(calculator.getPrimes(0)).to.be.empty;
 		});
 
-		it('returns [2] when n =2', function(){
+		it('returns [2] when n = 1', function(){
 			// using deep equal to assert that the array is ordered
 			expect(calculator.getPrimes(1)).to.deep.equal([2]);
 		});
