@@ -5,6 +5,7 @@
   "main"         : "main.js",
   "author"       : "Jhonny",
   "dependencies" : {
-    
+    "chai"       : "latest",
+    "sinon"      : "latest"
   }
 }
