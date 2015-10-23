@@ -10,7 +10,11 @@ describe('primesCalculator', function(){
 		});
 
 		it('returns [2] when n =2', function(){
-			expect(calculator.getPrimes(2)).to.have.members([2]);
+			expect(calculator.getPrimes(2)).to.deep.equal([2]);
+		});
+
+		it ('returns [2,3,5,7] when n = 4', function(){
+			expect(calculator.getPrimes(2)).to.deep.equal([2,3,5,7]);
 		});
 	});
 });
