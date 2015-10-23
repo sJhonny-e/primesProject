@@ -6,7 +6,7 @@ describe('primesCalculator', function(){
 
 	describe('#getPrimes(n)', function(){
 		it('returns empty array when n < 2', function(){
-			expect(calculator.getPrimes(1)).to.be.empty();
+			expect(calculator.getPrimes(1)).to.be.empty;
 		});
 	});
 });
