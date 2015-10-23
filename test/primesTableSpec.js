@@ -19,8 +19,9 @@ describe('PrimesTable', function(){
 			var mock = sinon.mock(primesCalculatorDep);
 			mock.expects('getPrimes').once().withArgs(n).returns([2,3,5,7]);
 
-			var table = new PrimesTable();
+			var table = new PrimesTable(n);
 			mock.verify();
+			mock.restore();
 		})
 	});
 });
