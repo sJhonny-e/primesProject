@@ -17,5 +17,9 @@ describe('primesCalculator', function(){
 		it ('returns [2,3,5,7] when n = 4', function(){
 			expect(calculator.getPrimes(4)).to.deep.equal([2,3,5,7]);
 		});
+
+		it ('returns [2,3,5,7,11,13,17] when n = 7', function(){
+			expect(calculator.getPrimes(7)).to.deep.equal([2,3,5,7,11,13,17]);
+		});
 	});
 });
