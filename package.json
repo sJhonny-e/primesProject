@@ -1,0 +1,10 @@
+{
+  "name"         : "prime-printer",
+  "version"      : "0.0.1",
+  "description"  : "Prints some primes.",
+  "main"         : "main.js",
+  "author"       : "Jhonny",
+  "dependencies" : {
+    
+  }
+}
