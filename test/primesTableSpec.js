@@ -41,6 +41,13 @@ describe('PrimesTable', function(){
 			expect(primesTable.elementAt(2, 0)).to.equal(fakePrimes[2-1]);
 		});
 
+		it ('returns the (j-1)-th prime for (0, j)', function(){
+			expect(primesTable.elementAt(0, 3)).to.equal(fakePrimes[3-1]);
+		});		
+
+		it ('returns the product for arbitrary (i, j)', function(){
+			expect(primesTable.elementAt(3, 2)).to.equal(fakePrimes[3-1] * fakePrimes[2-1]);
+		});
 
 		after(function(){
 			primesCalculatorDep.getPrimes.restore();
