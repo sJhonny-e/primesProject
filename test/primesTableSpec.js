@@ -22,6 +22,24 @@ describe('PrimesTable', function(){
 			var table = new PrimesTable(n);
 			mock.verify();
 			mock.restore();
+		});
+	});
+
+	describe('#elementAt(row,col)',function(){
+		var primesTable;
+		var fakePrimes = [5,7,9,11];
+		before(function(){
+			sinon.stub(primesCalculatorDep, 'getPrimes').returns(fakePrimes);
+			primesTable = new PrimesTable(88);
+		});
+
+		it('returns 1 for (0,0)', function(){
+			expect(primesTable.elementAt(0, 0)).to.equal(1);
+		})
+
+
+		after(function(){
+			primesCalculatorDep.getPrimes.restore();
 		})
 	});
 });
